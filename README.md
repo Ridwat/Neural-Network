@@ -2,7 +2,8 @@ Neural Network Image Classification with Fashion-MNIST
 
 This project demonstrates how to build, train, and evaluate a feedforward neural network (ANN) for image classification using the Fashion-MNIST dataset.
 The goal is to gain hands-on experience with deep learning techniques and understand how neural networks outperform traditional machine learning in image-based tasks.
-Dataset
+
+📦 Dataset
 
 Fashion-MNIST contains:
 
@@ -13,9 +14,11 @@ Fashion-MNIST contains:
 Classes include:
 T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot
 
-It loads automatically using TensorFlow/Keras — no manual download required.Tools & Libraries
+The dataset loads automatically using TensorFlow/Keras — no manual download required.
 
-The project was implemented using:
+🛠️ Tools & Libraries
+
+This project was implemented using:
 
 Python
 
@@ -25,66 +28,107 @@ NumPy
 
 Matplotlib & Seaborn
 
-Scikit-learnModel Architecture
+Scikit-learn
 
-A simple feedforward neural network:
+🔧 Model Architecture
 
-Flatten layer
+The neural network used is a simple feedforward neural network (ANN):
 
-Dense(256, ReLU)
+Flatten (28×28 → 784)
+Dense (256, ReLU)
+Dense (128, ReLU)
+Dense (10, Softmax)
 
-Dense(128, ReLU)
 
-Dense(10, Softmax)
-
-Compiled using:
+Compilation Settings:
 
 Optimizer: Adam
 
-Loss: Categorical Crossentropy
+Loss Function: Categorical Crossentropy
 
-Metric: AccuracyTraining
+Metric: Accuracy
 
-15 epochs
+🚀 Training Details
 
-Batch size = 64
+Epochs: 15
 
-Validation split = 20%
+Batch Size: 64
 
-Graphs of training vs. validation accuracy and loss are included in the notebook.Evaluation & Results
+Validation Split: 20%
+
+The notebook includes graphs showing accuracy and loss trends across epochs.
+
+📊 Evaluation Results
 
 Test Accuracy: ~0.889
 
 Test Loss: ~0.355
 
-Metrics: Precision, recall, F1-score
+Additional evaluation:
 
-Confusion Matrix: Included in notebook
+Confusion Matrix
 
-Common misclassifications occurred between visually similar categories such as shirt vs T-shirt.Real-World Application
+Precision, Recall, and F1-score (per class)
 
-This neural network model can be applied in:
+Classification Report
+
+Some misclassifications occur between visually similar classes (e.g., Shirt vs. T-shirt).
+
+🌍 Real-World Applications
+
+This model can be used in:
 
 Fashion retail automation
 
-E-commerce product tagging
+E-commerce product categorization
 
-Inventory categorization
+Inventory management systems
 
-Image-based recommendation systems
+Clothing recommendation engines
 
-Potential deployment involves:
+Deployment would involve:
 
-Building an API (Flask / FastAPI)
+Converting the model into an API (Flask/FastAPI)
 
-Running inference on GPU for speed
+Hosting on cloud (AWS, GCP, etc.)
 
-Monitoring model performance for driftHow to Run the Notebook
+Integrating with mobile/web applications
+
+📘 How to Run the Project
 
 Open the .ipynb notebook in Google Colab
 
-Run all cells
+Run each cell to:
 
-Visualize training results, confusion matrix, and classification report
+Load the dataset
 
-Export the notebook as PDF for assignment submission
+Train the network
+
+View graphs and evaluation metrics
+
+Export the notebook as PDF for submission
+
+(Optional) Load the saved model .h5 file
+
+📄 Report
+
+A two-page summary report is included in the notebook and can be exported as PDF using:
+
+File → Print → Save as PDF
+
+🚀 Future Improvements
+
+Possible enhancements:
+
+Use a Convolutional Neural Network (CNN) for higher accuracy
+
+Add stronger data augmentation
+
+Apply hyperparameter tuning
+
+Introduce dropout to prevent overfitting
+
+✨ Author
+
+ Adetola Odulaja
+AI & Data Analytics – Willis College (2025)
